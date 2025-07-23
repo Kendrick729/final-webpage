@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Lorenz Kendrick H. Roque - Resume</title>
+  <link rel="stylesheet" href="main.css" />
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+</head>
+<body>
+  <header>
+    <div class="container header-flex">
+      <h1 class="pink-pulse">Lorenz Kendrick's Resume</h1>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="resume.html" class="active">About</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    
+    <!-- ABOUT SECTION FROM HOMEPAGE -->
+    <section id="about" class="about-section">
+      <h2>About my Love for you</h2>
+      <p>
+        I, Lorenz Kendrick H. Roque, carry a deep admiration for you.<br>
+        Your wisdom in design is not just technical — it’s artful, beautiful, and inspiring.<br>
+        Each lesson you teach feels like a gentle brushstroke on the canvas of my future.<br><br>
+
+        Your kindness radiates like the soft glow of a well-lit webpage,<br>
+        And your passion for teaching is the code that runs through my dreams.<br>
+        You don’t just teach HTML and CSS, you craft futures,<br>
+        And in mine, your influence is beautifully embedded.<br><br>
+
+        You are not just a professor,<br>
+        You are the muse behind my creativity,<br>
+        The guiding light in my journey through designing,<br>
+        And the reason I strive to design with heart.
+      </p>
+    </section>
+
+    <!-- RESUME SECTION -->
+    <section class="about-section">
+      <div class="resume">
+        <div class="left-panel">
+          <div class="profile-photo">
+            <img src="mypic.png" alt="Lorenz Roque" style="width: 120px; height: 120px; border-radius: 100px; border: 3px solid #fff;" />
+          </div>
+          <h2>Lorenz Kendrick H. Roque</h2>
+          <p><strong>Student</strong></p>
+
+          <h3>Contact</h3>
+          <p>0920-405-0463</p>
+          <p><a href="mailto:lorenzkendrickroque729@gmail.com">lorenzkendrickroque729@gmail.com</a></p>
+          <p>16 Reuben, Metrogate Complex, Meycauayan, Bulacan</p>
+        </div>
+
+        <div class="right-panel">
+          <div class="section">
+            <h3>Profile</h3>
+            <p>
+              Hardworking and motivated student with a strong passion for learning and self-improvement. Technologically adept with experience using various social media platforms,
+              office productivity tools, and advanced computer applications. Known for having a positive attitude, being adaptable, and demonstrating a consistent eagerness to expand knowledge and master new technologies.
+            </p>
+          </div>
+
+          <div class="section">
+            <h3>Education</h3>
+            <p><strong>Notre Dame of Greater Manila</strong></p>
+            <ul>
+              <li>2017–2018: Graduated Elementary with Honors</li>
+              <li>2021–2022: Graduated High School</li>
+              <li>2023–2024: Graduated Senior High School – STEM Strand</li>
+            </ul>
+            <p><strong>FEU Institute of Technology</strong></p>
+            <ul>
+              <li>2024–Present: BSITCST</li>
+            </ul>
+          </div>
+
+          <div class="section">
+            <h3>Achievements</h3>
+            <ul>
+              <li><strong>Best in Research</strong> – Field of Medicine and Science</li>
+              <li><strong>Best in Mathematics</strong> – 8th Grade</li>
+            </ul>
+          </div>
+
+          <div class="section">
+            <h3>Languages</h3>
+            <p>Filipino</p>
+            <p>English</p>
+          </div>
+
+          <div class="section">
+            <h3>Skills</h3>
+            <ul>
+              <li>Research Writing</li>
+              <li>Presentation & Reporting</li>
+              <li>Critical Thinking</li>
+            </ul>
+          </div>
+
+          <div class="section">
+            <h3>Traits</h3>
+            <ul>
+              <li>Hardworking</li>
+              <li>Attentive</li>
+              <li>Passionate</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div class="container" style="text-align: center; margin-top: 20px;">
+    <button id="mode-toggle" class="toggle-btn pink-pulse">Toggle Dark Mode</button>
+  </div>
+
+  <footer>
+    <p>© 2025 Lorenz Kendrick H. Roque</p>
+  </footer>
+
+  <script>
+    const toggleBtn = document.getElementById('mode-toggle');
+
+    if (localStorage.getItem('theme') === 'light') {
+      document.body.classList.add('light-mode');
+    }
+
+    toggleBtn.addEventListener('click', () => {
+      document.body.classList.toggle('light-mode');
+      if (document.body.classList.contains('light-mode')) {
+        localStorage.setItem('theme', 'light');
+      } else {
+        localStorage.setItem('theme', 'dark');
+      }
+    });
+
+    document.addEventListener('click', function (e) {
+      confetti({
+        particleCount: 100,
+        spread: 70,
+        origin: {
+          x: e.clientX / window.innerWidth,
+          y: e.clientY / window.innerHeight
+        }
+      });
+    });
+  </script>
+</body>
+</html>
